@@ -327,14 +327,13 @@ echo.
 :: Volta ao normal assustador
 color 0a
 
-start %CaminhoRaiz\
 echo - Agora estamos muito mais perto, %username%.
 %Wait2%
 echo - Eles conseguem te ver atraves da fenda.
 
 
 :: Simulação de erro e invasão
-start %CaminhoMusica%\porta.mp3
+start %CaminhoMusica%\porta.mp3	
 echo msgbox"A PONTE FOI ABERTA.", vbCritical, "ALERTA DE SISTEMA">%temp%\bridge.vbs
 start %temp%\bridge.vbs
 
@@ -345,6 +344,9 @@ echo Proximo enigma que eu nao faço ideia do que fazer. >> "%USERPROFILE%\Deskt
 %Wait5%
 echo - Mais outro erro de software... 
 %Wait5%
+
+cls
+call Scripts\rostog.cmd
 
 :VigiaProcessos
 %Wait2%
@@ -401,14 +403,16 @@ if "%ERRORLEVEL%"=="0" (
 )
 
 :: --- CASO NÃO ACHE NADA ---
+cls
+call Scripts\rostog.cmd
 echo - Parece que voce esta focado apenas em mim.
+%Wait2%
 echo - Perfeito.
 
 :FimVigia
 %Wait2%
 echo - Vamos continuar.
-pause
-
+%Wait2%
 echo - Verifique a sua area de trabalho...
 
 :Parte4
