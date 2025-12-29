@@ -1,4 +1,5 @@
 :Parte2
+call Scripts\rosto.cmd
 %Wait2%
 echo - Olhe o seu navegador
 %Wait2%
@@ -7,19 +8,22 @@ start https://oficinadoestudante.com.br/tira-duvidas/4928/Ponte-de-Einstein-Rose
 echo - O que voce acha sobre a Ponte de Einstein-Rosen?
 set /p "input=@"
 cls
+color c
 call Scripts\rostog.cmd
 %Wait1%
-echo - Eu discordo... 
+echo - Eu 6asdta7$@%¨#*... 
 %Wait1%
-echo - Eu discordo... 
+echo - Eu VSCfcc$%#¨*... 
 %Wait1%
-echo - Você está mentindo... 
+color a
+echo - Você está ment%@¨&#%... 
 cls
+color c
 call Scripts\rostog.cmd
 %Wait1%
-echo - Eles conseguem te ver
+echo - Eles conseguem te v$r
 %Wait1%
-echo - Eles conseguem te ver
+echo - El$s conseguem te v#r
 echo msgbox"Erro ao executar \#$co8da", vbCritical, "CONSEGUEM VER">%temp%\erro.vbs
 start %temp%\erro.vbs
 echo msgbox"Erro ao executar \#$co8da", vbCritical, "ELES CONSEGUEM VER">%temp%\erro.vbs

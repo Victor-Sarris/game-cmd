@@ -31,6 +31,7 @@ echo - Nao... nao e isso.
 echo - O que estava escrito naquele arquivo? Traduza para mim.
 %Wait2% 
 echo - Cesar fez isso uma vez...
+%Wait5% 
 goto Enigma1
 
 :ResolveuEnigma1

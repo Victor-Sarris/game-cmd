@@ -1,5 +1,4 @@
 @echo off
-:: --- TRUQUE PARA FORÇAR JANELA CLÁSSICA ---
 if not "%1" == "max" (
     start conhost "%~f0" max
     exit
@@ -21,18 +20,21 @@ set "yesOrno=Sim sim s S N Nao nao Não não n"
 set "CaminhoRaiz=%cd%"
 set "CaminhoMusica=%CaminhoRaiz%\midea\music"
 
+:: --- configurações de data-time ---
+
 set "hora=%time:~0,2%"
-
 set "hora=%hora: =0%"
-
 set "hora=%hora::=%"
 
 :: --- INICIO DO JOGO ---
 
-call Scripts\rosto.cmd
-
-%Wait2%
-echo - Oi, %username%...
-
-
+::call Scripts\base001.cmd
+cls
+:: call Scripts\condicao001.cmd
+cls
+:: call Scripts\enigma001.cmd
+cls
+:: call Scripts\base002.cmd
+cls 
+:: call Scripts\enigma002.cmd
 pause
