@@ -21,10 +21,9 @@ if "%input%"=="" (
 	goto comeco001
 ) 
 
-%Wait2%
 cls
 call Scripts\rosto.cmd
-echo ...
+call Scripts\Features\typewriter.cmd "- ..."
 
 %Wait2%
 :: Verifica o Horário

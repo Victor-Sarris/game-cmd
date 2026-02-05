@@ -2,20 +2,20 @@
 cls
 call Scripts\rosto.cmd
 echo.
-echo - Para provar que voce existe...
+call Scripts\Features\typewriter.cmd "- Para provar que voce existe..."
 %Wait2%
-echo - Crie um arquivo de texto na sua Area de Trabalho
+call Scripts\Features\typewriter.cmd "- Crie um arquivo de texto na sua Area de Trabalho"
 echo   chamado "oferenda.txt".
 %Wait2%
-echo - Eu vou esperar.
+call Scripts\Features\typewriter.cmd "- Eu vou esperar."
 
 :ChecarArquivo
-:: Loop que verifica a cada 2 segundos se o arquivo existe
-timeout /t 2 /nobreak >nul
+:: Loop que verifica a cada 10 segundos se o arquivo existe
+timeout /t 10 /nobreak >nul
 if exist "%USERPROFILE%\Desktop\oferenda.txt" (
     goto ArquivoEncontrado
 ) else (
-    echo - Ainda nao encontrei a oferenda...
+    call Scripts\Features\typewriter.cmd "- Ainda nao encontrei a oferenda..."
     goto ChecarArquivo
 )
 
@@ -28,6 +28,6 @@ echo - ACEITO.
 
 :: Deleta o arquivo depois 
 del "%USERPROFILE%\Desktop\oferenda.txt"
-echo - Eu tomei sua oferenda. Ela se foi.
+call Scripts\Features\typewriter.cmd "- Eu tomei sua oferenda. Ela se foi."
 %Wait2%
 goto :EOF
