@@ -4,7 +4,7 @@
 cls
 call Scripts\rosto.cmd
 %Wait2%
-echo - Me fale depois o que descobriu...
+call Scripts\Features\typewriter.cmd "- Me fale depois o que descobriu..."
 
 set /p "input=@"
 
@@ -26,11 +26,11 @@ goto ResolveuEnigma1
 cls
 call Scripts\rosto.cmd
 %Wait2%
-echo - Nao... nao e isso.
+call Scripts\Features\typewriter.cmd "- Nao... nao e isso."
 %Wait2%
-echo - O que estava escrito naquele arquivo? Traduza para mim.
+call Scripts\Features\typewriter.cmd "- O que estava escrito naquele arquivo? Traduza para mim."
 %Wait2% 
-echo - Cesar fez isso uma vez...
+call Scripts\Features\typewriter.cmd "- Cesar fez isso uma vez..."
 %Wait5% 
 goto Enigma1
 
@@ -38,10 +38,10 @@ goto Enigma1
 cls
 call Scripts\rosto.cmd
 %Wait2%
-echo - Voce parece mais inteligente do que realmente e...
+call Scripts\Features\typewriter.cmd "- Voce parece mais inteligente do que realmente e..."
 %Wait2%
 echo - Certo
 %Wait2% 
 cls
 call Scripts\rosto.cmd
-echo - Voce vai servir...
+call Scripts\Features\typewriter.cmd "- Voce vai servir..."
