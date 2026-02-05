@@ -27,8 +27,9 @@ set "hora=%hora: =0%"
 set "hora=%hora::=%"
 
 :: --- INICIO DO JOGO ---
+:: --- SCRIPTS DO GAME --- 
 
-:: call Scripts\base001.cmd
+call Scripts\base001.cmd
 cls
 ::call Scripts\condicao001.cmd
 cls
@@ -38,5 +39,5 @@ cls
 cls 
 ::call Scripts\enigma002.cmd
 cls
-call Scripts\Features\VigiaSistema.cmd
+::call Scripts\Features\VigiaSistema.cmd
 pause

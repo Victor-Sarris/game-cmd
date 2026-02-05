@@ -11,12 +11,13 @@ call Scripts\rosto.cmd
 %Wait2%
 echo - Oi, %username%.
 %Wait2%
-echo - Como voce esta?
+echo - Esta tudo bem com voce?
 set /p "input=@"
 cls
 
 if "%input%"=="" (
-	echo - Você deve me responder...
+	echo - Que falta de educacao nao responder
+	echo - Foi isso que te ensinaram?
 ) goto comeco001
 
 %Wait2%
@@ -31,3 +32,14 @@ if %hora% geq 22 (
 ) else (
 	echo - Vejo que ainda esta claro la fora...
 )
+
+:Falar
+set "texto=%~1"
+echo Set Sapi = Wscript.CreateObject("SAPI.SpVoice") > "%temp%\fala.vbs"
+echo Sapi.Speak "%texto%" >> "%temp%\fala.vbs"
+start /wait %temp%\fala.vbs
+del "%temp%\fala.vbs"
+goto :EOF
+
+:: Exemplo de uso no jogo:
+call :Falar "Eu estou vendo voce, %username%"

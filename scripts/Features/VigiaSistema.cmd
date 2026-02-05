@@ -8,14 +8,14 @@ echo - Voce acha que esta no controle?
 echo - Este computador obedece a mim agora.
 %Wait2%
 
-:: Inicia o desligamento em 60 segundos com uma mensagem
-shutdown -s -t 60 -c "FALHA CRITICA DO SISTEMA - A ENTIDADE ASSUMIU O CONTROLE"
+:: Inicia o desligamento em 10 segundos com uma mensagem
+shutdown -s -t 10 -c "FALHA CRITICA DO SISTEMA - A ENTIDADE ASSUMIU O CONTROLE"
 
 echo - Adeus, %username%.
 %Wait5%
 echo - ...
 %Wait2%
-echo - Brincadeira.
+echo - Carpedim
 
 :: Cancela o desligamento
 shutdown -a
