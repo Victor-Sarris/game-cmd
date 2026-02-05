@@ -3,11 +3,11 @@
 cls
 call Scripts\rosto.cmd
 echo.
-call Scripts\Features\typewriter.cmd "- Deixe-me ver sua energia vital..."
+call Scripts\Features\typewriter.cmd "- Deixe-me ver seu tipo de dispositivo..."
 %Wait2%
 
-:: Verifica status da bateria
-wmic path Win32_Battery get BatteryStatus 2>nul | find "2" >nul
+powershell -command "Add-Type -AssemblyName System.Windows.Forms; if ([System.Windows.Forms.SystemInformation]::PowerStatus.PowerLineStatus -eq 'Online') { exit 0 } else { exit 1 }"
+
 if %errorlevel%==0 (
     call Scripts\Features\typewriter.cmd "- Voce depende de uma tomada..."
     %Wait2%

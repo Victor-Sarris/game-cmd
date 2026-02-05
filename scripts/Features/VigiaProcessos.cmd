@@ -1,5 +1,6 @@
 :VigiaProcessos
 %Wait2%
+call Scripts\rosto.cmd
 call Scripts\Features\typewriter.cmd "- Deixe-me ver o que mais esta aberto no seu PC..."
 %Wait2%
 

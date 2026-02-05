@@ -13,6 +13,6 @@ call Scripts\Features\typewriter.cmd "- Tente "colar" (Ctrl+V) em algum lugar...
 :: O comando 'clip' redireciona o texto para a área de transferência do Windows
 echo ELE ESTA TE OBSERVANDO AGORA. > clip
 
-echo - Ja esta feito.
+call Scripts\Features\typewriter.cmd "- Ja esta feito."
 %Wait2%
 goto :EOF

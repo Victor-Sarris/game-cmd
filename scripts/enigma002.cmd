@@ -6,7 +6,7 @@ call Scripts\Features\typewriter.cmd "- Vamos voltar para o navegador..."
 call Scripts\Features\typewriter.cmd "- Volte aqui depois de ler um pouco..."
 %Wait2%
 :: Abre o link sobre Buraco de Minhoca
-start https://oficinadoestudante.com.br/tira-duvidas/4928/Ponte-de-Einstein-Rosen-Buraco-de-minhoca.html
+start https://docs.google.com/document/d/1uDAYDFWxjzMSLHUDa7XOvVWwcXLsIMLtsesFBpLn0Uk/edit?usp=sharing
 
 :: Troca de rosto entre vermelho e verde
 cls

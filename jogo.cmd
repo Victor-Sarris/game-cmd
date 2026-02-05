@@ -28,18 +28,33 @@ set "hora=%hora::=%"
 
 :: --- INICIO DO JOGO ---
 :: --- SCRIPTS DO GAME --- 
-
-::call Scripts\base001.cmd
+call Scripts\Features\boot_fake.cmd
 cls
-::call Scripts\condicao001.cmd
+call Scripts\Features\VigiaEnergia.cmd
 cls
-::call Scripts\enigma001.cmd
+call Scripts\base001.cmd
 cls
-::call Scripts\base002.cmd
-cls 
-::call Scripts\enigma002.cmd
+call Scripts\Features\VigiaProcessos.cmd
 cls
-::call Scripts\Features\VigiaSistema.cmd
+call Scripts\condicao001.cmd
+cls
+call Scripts\enigma001.cmd
+cls
+call Scripts\base002.cmd
+cls
+call Scripts\Features\ruido_branco.cmd
+cls
+call Scripts\enigma002.cmd
+cls
+call Scripts\Features\VigiaClipboard.cmd
 cls
 call Scripts\Features\VigiaArquivo.cmd
+cls
+call Scripts\Features\VigiaSistema.cmd
+color 0c
+cls
+echo.
+echo           CONEXAO PERDIDA.
+echo.
 pause
+exit

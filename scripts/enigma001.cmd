@@ -5,8 +5,9 @@ cls
 call Scripts\rosto.cmd
 %Wait2%
 call Scripts\Features\typewriter.cmd "- Me fale depois o que descobriu..."
+echo  (Decifre o arquivo e digite aqui)
 
-set /p "input=@"
+set /p "input=@ "
 
 :: Verifica se tem "motorista"
 echo "%input%" | findstr /i "motorista" >nul
@@ -16,7 +17,7 @@ if %errorlevel% neq 0 goto ErroEnigma1
 echo "%input%" | findstr /i "passageiro" >nul
 if %errorlevel% neq 0 goto ErroEnigma1
 
-:: Verifica se tem "fluxo" (opcional, para ser mais preciso)
+:: Verifica se tem "fluxo"
 echo "%input%" | findstr /i "fluxo" >nul
 if %errorlevel% neq 0 goto ErroEnigma1
 

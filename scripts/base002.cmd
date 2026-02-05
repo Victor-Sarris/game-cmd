@@ -3,7 +3,7 @@ call Scripts\rosto.cmd
 %Wait2%
 call Scripts\Features\typewriter.cmd "- Olhe o seu navegador"
 %Wait2%
-start https://oficinadoestudante.com.br/tira-duvidas/4928/Ponte-de-Einstein-Rosen-Buraco-de-minhoca.html
+start https://docs.google.com/document/d/1uDAYDFWxjzMSLHUDa7XOvVWwcXLsIMLtsesFBpLn0Uk/edit?usp=sharing
 %Wait5%
 call Scripts\Features\typewriter.cmd "- O que voce acha sobre a Ponte de Einstein-Rosen?"
 set /p "input=@"
