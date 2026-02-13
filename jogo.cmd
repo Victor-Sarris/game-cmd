@@ -3,11 +3,10 @@ if not "%1" == "max" (
     start conhost "%~f0" max
     exit
 )
-:: ------------------------------------------
 
 setlocal enabledelayedexpansion
 title jogo
-:: Tamanho da janela
+ :: Tamanho da janela
 mode 44,30
 color a
 
@@ -21,13 +20,10 @@ set "CaminhoRaiz=%cd%"
 set "CaminhoMusica=%CaminhoRaiz%\midea\music"
 
 :: --- configurações de data-time ---
-
 set "hora=%time:~0,2%"
 set "hora=%hora: =0%"
 set "hora=%hora::=%"
 
-:: --- INICIO DO JOGO ---
-:: --- SCRIPTS DO GAME --- 
 call Scripts\Features\boot_fake.cmd
 cls
 call Scripts\Features\VigiaEnergia.cmd
