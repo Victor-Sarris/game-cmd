@@ -1,6 +1,7 @@
 :VigiaEnergia
 %Wait2%
 cls
+color a
 call Scripts\rosto.cmd
 echo.
 call Scripts\Features\typewriter.cmd "- Deixe-me ver seu tipo de dispositivo..."
