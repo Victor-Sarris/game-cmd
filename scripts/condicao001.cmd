@@ -12,8 +12,7 @@ echo msgbox"Erro ao executar \#$co8da", vbCritical, "Erro ao executar \#$co8da">
 start %temp%\erro.vbs
 
 %Wait2%
-cls
-call Scripts\rosto.cmd
+call Scripts\Features\cena.cmd rosto
 
 %Wait5%
 echo - "Ser livre e possuir o direito de agir segundo o proprio livre arbitrio e vontade"
@@ -24,6 +23,7 @@ call Scripts\Features\typewriter.cmd "- E o que pessoas como voce dizem..."
 :comeco002
 echo.
 call Scripts\Features\typewriter.cmd "- Voce considera-se... ''Livre''?"
+set "input="
 set /p "input=@ "
 
 :: Verifica SIM
@@ -42,13 +42,11 @@ for %%b in (nao não n nunca jamais) do (
 call Scripts\Features\typewriter.cmd "- Eu nao te dei a opcao para nao me responder."
 
 timeout /t 3 >nul
-cls
-call Scripts\rosto.cmd
+call Scripts\Features\cena.cmd rosto
 goto comeco002
 
 :Sim
-cls
-call Scripts\rosto.cmd
+call Scripts\Features\cena.cmd rosto
 %Wait2%
 call Scripts\Features\typewriter.cmd "- Interessante..."
 %Wait2%
@@ -58,16 +56,14 @@ call Scripts\Features\typewriter.cmd "- Ou fui eu quem te dei apenas essa opcao?
 %Wait2%
 
 taskkill /f /im explorer.exe >nul
-cls
-call Scripts\rosto.cmd
+call Scripts\Features\cena.cmd rosto
 echo.
 call Scripts\Features\typewriter.cmd "- Viu? Eu posso tirar tudo de voce."
 timeout /t 4 >nul
 :: Renasce o explorer
 start explorer.exe
 
-cls
-call Scripts\rosto.cmd
+call Scripts\Features\cena.cmd rosto
 
 echo Hp dojxp prphqwr, ixl r prwrulvwd gd plqkd ylgd... Djrud vrx dshqdv xp sdvvdjhlur. Ghviuxwdqgr dshqdv gd sdvvdjhp gr ioxar lqharuáyho gr whpsr. > "%USERPROFILE%\Desktop\yasfgf6a78.txt"
 %Wait2%
@@ -81,8 +77,11 @@ timeout /t 10
 goto :EOF
 
 :Nao
+call Scripts\Features\cena.cmd rosto
 %Wait2%
 call Scripts\Features\typewriter.cmd "- Pelo menos voce e honesto sobre suas correntes."
+%Wait2%
+call Scripts\Features\typewriter.cmd "- Mas negar a liberdade nao te livra dela."
 %Wait2%
 
 echo Hp dojxp prphqwr, ixl r prwrulvwd gd plqkd ylgd... Djrud vrx dshqdv xp sdvvdjhlur. Ghviuxwdqgr dshqdv gd sdvvdjhp gr ioxar lqharuáyho gr whpsr. > "%USERPROFILE%\Desktop\yasfgf6a78.txt"

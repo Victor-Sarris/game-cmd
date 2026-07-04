@@ -1,7 +1,5 @@
 :VigiaSistema
-cls
-color c
-call Scripts\rostog.cmd
+call Scripts\Features\cena.cmd rostog c
 %Wait2%
 call Scripts\Features\typewriter.cmd "- Voce acha que esta no controle?"
 %Wait2%
@@ -19,9 +17,7 @@ call Scripts\Features\typewriter.cmd "- Carpedim"
 
 :: Cancela o desligamento
 shutdown -a
-cls
-color a
-call Scripts\rosto.cmd
+call Scripts\Features\cena.cmd rosto a
 call Scripts\Features\typewriter.cmd "- Eu decido quando termina."
 %Wait2%
 goto :EOF
