@@ -1,7 +1,6 @@
 :VigiaClipboard
 %Wait2%
-cls
-call Scripts\rosto.cmd
+call Scripts\Features\cena.cmd rosto
 echo.
 call Scripts\Features\typewriter.cmd "- Eu deixei um recado para voce..."
 %Wait2%

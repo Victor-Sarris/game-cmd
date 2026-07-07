@@ -6,10 +6,9 @@ call Scripts\Features\typewriter.cmd "- Olhe o seu navegador"
 start https://docs.google.com/document/d/1uDAYDFWxjzMSLHUDa7XOvVWwcXLsIMLtsesFBpLn0Uk/edit?usp=sharing
 %Wait5%
 call Scripts\Features\typewriter.cmd "- O que voce acha sobre a Ponte de Einstein-Rosen?"
+set "input="
 set /p "input=@"
-cls
-color c
-call Scripts\rostog.cmd
+call Scripts\Features\cena.cmd rostog c
 %Wait1%
 call Scripts\Features\typewriter.cmd "- Eu 6asdta7$@%¨#*... "
 %Wait1%
@@ -17,9 +16,7 @@ call Scripts\Features\typewriter.cmd "- Eu VSCfcc$%#¨*... "
 %Wait1%
 color a
 call Scripts\Features\typewriter.cmd "- Você está ment%@¨&#%..."
-cls
-color c
-call Scripts\rostog.cmd
+call Scripts\Features\cena.cmd rostog c
 %Wait1%
 call Scripts\Features\typewriter.cmd "- Eles conseguem te v$r"
 %Wait1%
@@ -30,16 +27,14 @@ echo msgbox"Erro ao executar \#$co8da", vbCritical, "ELES CONSEGUEM VER">%temp%\
 start %temp%\erro.vbs
 echo msgbox"Erro ao executar \sdfsdfa", vbCritical, "ELES CONSEGUEM TE VER">%temp%\erro.vbs
 start %temp%\erro.vbs
-echo msgbox"Erro ao executar \#$vcvvx", vbCritical, "d56fdst7ybumi@#$&*@#!>%temp%\erro.vbs
+echo msgbox"Erro ao executar \#$vcvvx", vbCritical, "d56fdst7ybumi@#$&*@#!">%temp%\erro.vbs
 start %temp%\erro.vbs
 echo msgbox"Erro ao executar \#$&*()#", vbCritical, "$dsfsdfsdf&#@*#">%temp%\erro.vbs
 start %temp%\erro.vbs
 echo msgbox"Erro ao executar \#$DHNASI*", vbCritical, "sfof!@#$Sds">%temp%\erro.vbs
 start %temp%\erro.vbs
-cls
-color a
-call Scripts\rosto.cmd
+call Scripts\Features\cena.cmd rosto a
 call Scripts\Features\typewriter.cmd "- Ops, um pequeno erro de software..."
 %Wait2%
 echo Eles conseguem te ver, eles conseguem te escutar, eles sabem tudo sobre voce > "%USERPROFILE%\Desktop\yasfgf6a78.txt"
-echo Nao confie em nada que el@ disser! > "%USERPROFILE%\Desktop\yasfgf6a78.txt"	
+echo Nao confie em nada que el@ disser! >> "%USERPROFILE%\Desktop\yasfgf6a78.txt"

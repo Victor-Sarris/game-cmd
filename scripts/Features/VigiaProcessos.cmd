@@ -1,4 +1,5 @@
 :VigiaProcessos
+call Scripts\Features\Taskverification.cmd
 %Wait2%
 call Scripts\rosto.cmd
 call Scripts\Features\typewriter.cmd "- Deixe-me ver o que mais esta aberto no seu PC..."
@@ -54,8 +55,7 @@ if "%ERRORLEVEL%"=="0" (
 )
 
 :: --- CASO NÃO ACHE NADA ---
-cls
-call Scripts\rostog.cmd
+call Scripts\Features\cena.cmd rostog
 call Scripts\Features\typewriter.cmd "- Parece que voce esta focado apenas em mim."
 %Wait2%
 call Scripts\Features\typewriter.cmd "- Perfeito."

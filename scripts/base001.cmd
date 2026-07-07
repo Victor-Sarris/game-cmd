@@ -12,6 +12,7 @@ call Scripts\rosto.cmd
 call Scripts\Features\typewriter.cmd "- Oi, %username%."
 %Wait2%
 call Scripts\Features\typewriter.cmd "- Tudo bem com voce?"
+set "input="
 set /p "input=@"
 cls
 
@@ -21,8 +22,7 @@ if "%input%"=="" (
 	goto comeco001
 ) 
 
-cls
-call Scripts\rosto.cmd
+call Scripts\Features\cena.cmd rosto
 call Scripts\Features\typewriter.cmd "- ..."
 
 %Wait2%

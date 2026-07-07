@@ -1,7 +1,12 @@
 :VigiaEnergia
 %Wait2%
+<<<<<<< HEAD
+call Scripts\Features\cena.cmd rosto
+=======
 cls
+color a
 call Scripts\rosto.cmd
+>>>>>>> origin/develop
 echo.
 call Scripts\Features\typewriter.cmd "- Deixe-me ver seu tipo de dispositivo..."
 %Wait2%

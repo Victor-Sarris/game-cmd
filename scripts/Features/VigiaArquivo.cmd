@@ -1,6 +1,5 @@
 :VigiaArquivo
-cls
-call Scripts\rosto.cmd
+call Scripts\Features\cena.cmd rosto
 echo.
 call Scripts\Features\typewriter.cmd "- Para provar que voce existe..."
 %Wait2%
@@ -20,8 +19,7 @@ if exist "%USERPROFILE%\Desktop\oferenda.txt" (
 )
 
 :ArquivoEncontrado
-cls
-call Scripts\rostog.cmd
+call Scripts\Features\cena.cmd rostog
 echo.
 echo - ACEITO.
 %Wait2%
