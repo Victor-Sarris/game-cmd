@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @echo off
 if /i "%~1"=="list" (
     echo Estagios disponiveis para debug: jogo.cmd ^<estagio^>
@@ -107,3 +108,61 @@ echo           CONEXAO PERDIDA.
 echo.
 pause
 exit
+=======
+@echo off
+if not "%1" == "max" (
+    start conhost "%~f0" max
+    exit
+)
+
+setlocal enabledelayedexpansion
+title jogo
+ :: Tamanho da janela
+mode 44,30
+color a
+
+set "Wait05=powershell -c Start-Sleep -m 500"
+set "Wait1=timeout /t 1 /nobreak >nul"
+set "Wait2=timeout /t 2 /nobreak >nul"
+set "Wait5=timeout /t 5 /nobreak >nul"
+set "Wait10=timeout /t 10 /nobreak >nul"
+set "yesOrno=Sim sim s S N Nao nao Não não n"
+set "CaminhoRaiz=%cd%"
+set "CaminhoMusica=%CaminhoRaiz%\midea\music"
+
+:: --- configurações de data-time ---
+set "hora=%time:~0,2%"
+set "hora=%hora: =0%"
+set "hora=%hora::=%"
+
+call Scripts\Features\boot_fake.cmd
+cls
+call Scripts\Features\VigiaEnergia.cmd
+cls
+call Scripts\base001.cmd
+cls
+call Scripts\Features\VigiaProcessos.cmd
+cls
+call Scripts\condicao001.cmd
+cls
+call Scripts\enigma001.cmd
+cls
+call Scripts\base002.cmd
+cls
+call Scripts\Features\ruido_branco.cmd
+cls
+call Scripts\enigma002.cmd
+cls
+call Scripts\Features\VigiaClipboard.cmd
+cls
+call Scripts\Features\VigiaArquivo.cmd
+cls
+call Scripts\Features\VigiaSistema.cmd
+color 0c
+cls
+echo.
+echo           CONEXAO PERDIDA.
+echo.
+pause
+exit
+>>>>>>> origin/develop
