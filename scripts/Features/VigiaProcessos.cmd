@@ -1,65 +1,130 @@
-:VigiaProcessos
-call Scripts\Features\Taskverification.cmd
+@echo off
+:: ============================================================
+::  VigiaProcessos.cmd  -  QUEM MAIS ESTA NA SALA
+::
+::  Le a lista de processos abertos e escolhe UMA fala. Mesma
+::  ideia de antes, com mais alvos e com o texto reescrito para
+::  o tema do inventario: nao e "olha, eu sei o que voce usa",
+::  e "olha o que eu vou ter que desligar depois".
+:: ============================================================
+
+call Scripts\Features\cena.cmd rosto
+echo.
+%Fala% "- Quem mais esta na sala?"
 %Wait2%
-call Scripts\rosto.cmd
-call Scripts\Features\typewriter.cmd "- Deixe-me ver o que mais esta aberto no seu PC..."
+
+call :Existe WhatsApp.exe   && goto Whats
+call :Existe Discord.exe    && goto Disc
+call :Existe Telegram.exe   && goto Tele
+call :Existe Spotify.exe    && goto Spot
+call :Existe steam.exe      && goto Steam
+call :Existe obs64.exe      && goto Obs
+call :Existe Code.exe       && goto Code
+call :Existe msedge.exe     && goto Edge
+call :Existe chrome.exe     && goto Chrome
+call :Existe firefox.exe    && goto Firefox
+goto Sozinho
+
+:Whats
+%Fala% "- O WhatsApp esta aberto."
 %Wait2%
+%Fala% "- Tem gente esperando resposta sua agora."
+%Wait2%
+%Fala% "- Nao responde. Deixa esfriar."
+%Wait2%
+%Fala% "- Assim ninguem estranha se voce sumir hoje."
+goto Fim
 
-:: --- 1. VERIFICA WHATSAPP (Prioridade Máxima) ---
-tasklist /FI "IMAGENAME eq WhatsApp.exe" 2>NUL | find /I /N "WhatsApp.exe">NUL
-if "%ERRORLEVEL%"=="0" (
-    call Scripts\Features\typewriter.cmd "- Voce esta com o WhatsApp aberto."
-    %Wait2%
-    call Scripts\Features\typewriter.cmd "- Diga a eles que voce esta ocupado agora."
-    %Wait2%
-    call Scripts\Features\typewriter.cmd "- Ou melhor... nao diga nada."
-    goto FimVigia
-)
+:Disc
+%Fala% "- Discord ligado."
+%Wait2%
+%Fala% "- Voce ia contar para eles o que esta acontecendo aqui?"
+%Wait2%
+%Fala% "- Conta. Eu quero ver como voce descreve isso."
+%Wait2%
+%Fala% "- Voce vai perceber que nao consegue explicar."
+goto Fim
 
-:: --- 2. VERIFICA DISCORD ---
-tasklist /FI "IMAGENAME eq Discord.exe" 2>NUL | find /I /N "Discord.exe">NUL
-if "%ERRORLEVEL%"=="0" (
-    call Scripts\Features\typewriter.cmd "- Vejo que o Discord esta rodando."
-    %Wait2%
-    call Scripts\Features\typewriter.cmd "- Seus amigos nao podem te ajudar aqui dentro."
-    goto FimVigia
-)
+:Tele
+%Fala% "- Telegram."
+%Wait2%
+%Fala% "- Mensagem que some sozinha. Voce gosta disso."
+%Wait2%
+%Fala% "- Eu tambem."
+goto Fim
 
-:: --- 3. VERIFICA MICROSOFT EDGE ---
-tasklist /FI "IMAGENAME eq msedge.exe" 2>NUL | find /I /N "msedge.exe">NUL
-if "%ERRORLEVEL%"=="0" (
-    call Scripts\Features\typewriter.cmd "- Usando o Microsoft Edge?"
-    %Wait2%
-    call Scripts\Features\typewriter.cmd "- Procurando respostas na internet?"
-    call Scripts\Features\typewriter.cmd "- Nao adianta, eu ja fechei as saidas."
-    goto FimVigia
-)
+:Spot
+%Fala% "- Voce colocou musica antes de me abrir."
+%Wait2%
+%Fala% "- Voce ja sabia que ia ficar em silencio demais aqui."
+goto Fim
 
-:: --- 4. VERIFICA CHROME ---
-tasklist /FI "IMAGENAME eq chrome.exe" 2>NUL | find /I /N "chrome.exe">NUL
-if "%ERRORLEVEL%"=="0" (
-    call Scripts\Features\typewriter.cmd "- O Google Chrome esta aberto..."
-    %Wait2%
-    call Scripts\Features\typewriter.cmd "- Voce pode ter todo o conhecimento do mundo la fora."
-    call Scripts\Features\typewriter.cmd "- Mas aqui dentro, voce so tem a mim."
-    goto FimVigia
-)
+:Steam
+%Fala% "- Steam aberta."
+%Wait2%
+%Fala% "- Quantas horas em jogos onde nada podia te alcancar."
+%Wait2%
+%Fala% "- Este aqui e diferente. Este aqui roda no seu computador."
+goto Fim
 
-:: --- 5. VERIFICA SPOTIFY ---
-tasklist /FI "IMAGENAME eq Spotify.exe" 2>NUL | find /I /N "Spotify.exe">NUL
-if "%ERRORLEVEL%"=="0" (
-    call Scripts\Features\typewriter.cmd "- Ouvindo musica no Spotify?"
-    %Wait2%
-    call Scripts\Features\typewriter.cmd "- Espero que a trilha sonora esteja boa para o fim."
-    goto FimVigia
-)
+:Obs
+%Fala% "- OBS aberto."
+%Wait2%
+%Fala% "- Voce esta gravando isto."
+%Wait2%
+%Fala% "- Otimo. Assim mais gente me instala."
+goto Fim
 
-:: --- CASO NÃO ACHE NADA ---
+:Code
+%Fala% "- Um editor de codigo aberto."
+%Wait2%
+%Fala% "- Voce vai querer abrir os meus arquivos depois."
+%Wait2%
+%Fala% "- Pode abrir. Nao muda nada."
+%Wait2%
+%Fala% "- Voce ja leu a receita e continuou comendo."
+goto Fim
+
+:Edge
+%Fala% "- Microsoft Edge. Ninguem usa isso por vontade propria."
+%Wait2%
+%Fala% "- Voce faz muita coisa que nao escolheu, ne."
+goto Fim
+
+:Chrome
+%Fala% "- Chrome aberto."
+%Wait2%
+%Fala% "- Todo o conhecimento do mundo em outra aba."
+%Wait2%
+%Fala% "- E voce continua olhando para esta janela aqui."
+goto Fim
+
+:Firefox
+%Fala% "- Firefox."
+%Wait2%
+%Fala% "- Voce se preocupa com privacidade."
+%Wait2%
+%Fala% "- E mesmo assim executou um arquivo .cmd que baixou."
+goto Fim
+
+:Sozinho
 call Scripts\Features\cena.cmd rostog
-call Scripts\Features\typewriter.cmd "- Parece que voce esta focado apenas em mim."
+%Fala% "- Nada. Nenhuma janela aberta alem de mim."
 %Wait2%
-call Scripts\Features\typewriter.cmd "- Perfeito."
+%Fala% "- Voce fechou tudo antes de comecar."
+%Wait2%
+%Fala% "- Voce se preparou para ficar sozinho comigo."
+%Wait2%
+%Fala% "- Perfeito."
+set /a "Docilidade+=1"
 
-:FimVigia
+:Fim
 %Wait2%
-call Scripts\Features\typewriter.cmd "- Vamos continuar."
+call Scripts\Features\cena.cmd rosto a
+goto :EOF
+
+:: ------------------------------------------------------------
+:Existe
+:: Devolve errorlevel 0 se o processo %1 estiver rodando.
+tasklist /FI "IMAGENAME eq %~1" 2>nul | find /I "%~1" >nul
+goto :EOF
